@@ -619,6 +619,7 @@ export default function createListComponent({
         for (let index = startIndex; index <= stopIndex; index++) {
           items.push(
             createElement(children, {
+              'data-test-renderItems': 'test',
               data: itemData,
               key: itemKey(index, itemData),
               index,
