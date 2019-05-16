@@ -347,6 +347,7 @@ export default function createListComponent({
         ((outerTagName: any): string),
         {
           className,
+          'data-test-outerTagName': 'test',
           onScroll,
           ref: this._outerRefSetter,
           style: {
@@ -359,6 +360,7 @@ export default function createListComponent({
           },
         },
         createElement(((innerTagName: any): string), {
+          'data-test-innerTagName': 'test',
           children: items,
           ref: innerRef,
           style: innerListStyle,
