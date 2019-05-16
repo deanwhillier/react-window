@@ -447,6 +447,7 @@ const DynamicSizeList = createListComponent({
             items.push(
               createElement('div', {
                 key: itemKey(index),
+                'data-test': 'testing',
                 style,
               })
             );
