@@ -347,9 +347,9 @@ export default function createListComponent({
         ((outerTagName: any): string),
         {
           className,
-          'data-test-outerTagName': 'test',
           onScroll,
           ref: this._outerRefSetter,
+          dataTest: 'outerTagName',
           style: {
             WebkitOverflowScrolling: 'touch',
             overflowY: 'auto',
@@ -360,9 +360,9 @@ export default function createListComponent({
           },
         },
         createElement(((innerTagName: any): string), {
-          'data-test-innerTagName': 'test',
           children: items,
           ref: innerRef,
+          dataTest: 'innerTagName',
           style: innerListStyle,
         })
       );
@@ -619,7 +619,6 @@ export default function createListComponent({
         for (let index = startIndex; index <= stopIndex; index++) {
           items.push(
             createElement(children, {
-              'data-test-renderItems': 'test',
               data: itemData,
               key: itemKey(index, itemData),
               index,
